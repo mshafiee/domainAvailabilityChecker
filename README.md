@@ -25,7 +25,20 @@ go run main.go <domain_name>
 ```sh
 go run main.go <domain_name> <comma_separated_list_of_TLDs>
 ```
-
+- Sample:
 ```sh
 go run main.go github com,org,net,de,uk,ir
+
+Checking availability for domain 'github' with 6 TLDs
+-------------------------------------
+Available domains:
+        github.uk is available.
+        github.ir is available.
+-------------------------------------
+Registered domains:
+        github.com is registered.
+        github.org is registered.
+        github.net is registered.
+        github.de is registered.
+
 ```
