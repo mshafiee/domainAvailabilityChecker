@@ -28,13 +28,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Check if domain name is valid
-	valid = isValidDomain(domain)
-	if !valid {
-		fmt.Println("Error: Invalid domain name.")
-		os.Exit(1)
-	}
-
 	var tlds []string
 	if len(os.Args) > 2 {
 		tldArg := os.Args[2]
