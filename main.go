@@ -54,7 +54,11 @@ func main() {
 		if err == nil {
 			registered = append(registered, tld)
 		} else {
-			fmt.Printf("\t%s.%s is available.\n", domain, tld)
+			if strings.Contains(err.Error(), "no such host") {
+				fmt.Printf("\t%s.%s is available.\n", domain, tld)
+			} else {
+				fmt.Println(err)
+			}
 		}
 	}
 	if len(registered) == 0 {
@@ -111,7 +115,7 @@ func getTLDs() []string {
 	// or any line that is between two newline characters with whitespace in between
 	r, _ = regexp.Compile("^\\s*\\n|\\n\\s*\\n")
 	tldList = r.ReplaceAllString(tldList, "")
-	
+
 	// lowercase all TLDs
 	tldList = strings.ToLower(tldList)
 
