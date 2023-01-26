@@ -14,8 +14,8 @@ func main() {
 	// Get domain name from command line argument
 	if len(os.Args) < 2 {
 		fmt.Println("Error: Please provide a domain name as a command line argument")
-		fmt.Println("Usage: ./domainAvailabilityChecker <domain_name> <comma_separated_list_of_TLDs (optional)>")
-		os.Exit(1)
+		fmt.Println("Usage: ./domainAvailabilityChecker <domain_name> <optional_comma_separated_list_of_TLDs>")
+		os.Exit(1
 	}
 
 	// Get domain name from command line argument
