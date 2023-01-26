@@ -42,3 +42,11 @@ Registered domains:
         github.de is registered.
 
 ```
+ 7. Run the following command to build the executable binary:
+ ```sh
+$ go build -o domainAvailabilityChecker
+```
+ 8. This will create a binary called domainAvailabilityChecker in the root directory of the project. You can then move this binary to a directory that is in your system's PATH environment variable, such as /usr/local/bin, so that you can run the tool from anywhere on your system.
+ ```sh
+$ sudo mv domainAvailabilityChecker /usr/local/bin/
+```
