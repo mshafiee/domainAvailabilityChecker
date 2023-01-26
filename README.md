@@ -25,3 +25,7 @@ go run main.go <domain_name>
 ```sh
 go run main.go <domain_name> <comma_separated_list_of_TLDs>
 ```
+
+```sh
+go run main.go github com,org,net,de,uk,ir
+```
